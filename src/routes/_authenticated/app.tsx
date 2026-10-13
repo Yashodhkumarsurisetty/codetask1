@@ -96,7 +96,7 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
             onClick={onNavigate}
             className="flex items-center gap-3 rounded-lg px-3 py-1.5 text-sm text-sidebar-foreground/75 hover:bg-sidebar-accent data-[status=active]:bg-sidebar-accent data-[status=active]:text-sidebar-foreground"
           >
-            <span className="size-2 rounded-full" style={{ background: colorVar[p.color] ?? colorVar.teal }} />
+            <span className="size-2 rounded-full" style={{ background: colorVar[p.color] ?? colorVar["teal"] }} />
             <span className="truncate">{p.name}</span>
           </Link>
         ))}

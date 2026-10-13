@@ -8,8 +8,8 @@ import { Label } from "@/components/ui/label";
 import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/auth")({
-  validateSearch: (s: Record<string, unknown>): { mode?: "signup" } => ({
-    mode: s.mode === "signup" ? "signup" : undefined,
+  validateSearch: (s: Record<string, unknown>): { mode?: "signup" | undefined } => ({
+    mode: s["mode"] === "signup" ? "signup" : undefined,
   }),
   head: () => ({
     meta: [
